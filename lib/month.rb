@@ -1,5 +1,6 @@
 require 'date'
 class Month
+  include Comparable
   attr_accessor :year, :number
 
   def initialize(d)
@@ -9,7 +10,19 @@ class Month
   end
 
   def to_s
-    @start_date.strftime("%B")
+    "#{name}, #{@year}"
   end
 
+  def name
+    @start_date.strftime("%B")
+  end 
+
+  def <=> (other)
+    return @year <=> other.year unless @year == other.year
+    @number <=> other.number
+  end
+
+  def succ 
+    Month.new Date.new(@year, @number+1, 1)
+  end
 end
