@@ -1,4 +1,4 @@
-= fun-times
+= funtimes
 
 Library for working with months, quarters and date ranges in Ruby.
 

@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "fun-times"
+    gem.name = "funtimes"
     gem.summary = %Q{Manage date ranges, months and quarters}
     gem.description = %Q{Manage date ranges, months and quarters}
     gem.email = "ignu.smith@gmail.com"
@@ -39,7 +39,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "fun-times #{version}"
+  rdoc.title = "funtimes #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
