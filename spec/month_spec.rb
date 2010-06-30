@@ -22,4 +22,13 @@ describe "Month" do
     range.end.should == sept
   end
 
+  it "can iterate over months when crossing a year barrier" do
+    range = (july..(Month.new(Date.new(1978, 1, 1))))
+    range.to_a.length.should == 7
+  end
+
+  it "can add and subtract months" do 
+    (july+1).to_s.should == "August, 1977"
+  end
+
 end

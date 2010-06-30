@@ -23,6 +23,25 @@ class Month
   end
 
   def succ 
-    Month.new Date.new(@year, @number+1, 1)
+    return Month.new(Date.new(@year+1, 1, 1)) if (@number == 12)
+    Month.new Date.new(@year, @number+1, 1) 
+  end
+
+  #TODO: refactor for speed and clarity 
+  def prev 
+    return Month.new(Date.new(@year-1, 12, 1)) if (@number == 1)
+    Month.new Date.new(@year, @number-1, 1) 
+  end
+  
+  def + (amount)
+    rv = self
+    amount.times {rv = rv.succ}
+    rv 
+  end
+
+  def -(amount)
+    rv = self
+    amount.times {rv = rv.prev}
+    rv 
   end
 end
