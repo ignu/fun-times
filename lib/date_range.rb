@@ -28,6 +28,12 @@ module DateRange
     other.start_date == _start && other.end_date == _end
   end
 
+  def number_of_days_in(other)
+    intersection = (self & other)
+    return 0 if intersection == []
+    intersection.days.to_a.length
+  end
+
   private
    
   def overlaps(other)

@@ -6,9 +6,9 @@ describe "DateRange" do
   let(:endOfYear)    { DateTime.new(2001,12,31) }
   let(:firstOfMarch) { DateTime.new(2001,3,1) }
   let(:endOfMarch)   { DateTime.new(2001,3,30) }
-  let(:firstOfJuly) { DateTime.new(2001,7,1) }
-  let(:endOfJuly)   { DateTime.new(2001,7,31) }
-  let(:range)     { SimpleRange.new(DateTime.new(2001,1,1), DateTime.new(2001,7,5))}
+  let(:firstOfJuly)  { DateTime.new(2001,7,1) }
+  let(:endOfJuly)    { DateTime.new(2001,7,31) }
+  let(:range)        { SimpleRange.new(DateTime.new(2001,1,1), DateTime.new(2001,7,5))}
   let(:year)         { SimpleRange.new(firstOfYear, endOfYear)}
   let(:march)        { SimpleRange.new(firstOfMarch, endOfMarch)}
   let(:july)         { SimpleRange.new(firstOfJuly, endOfJuly)}
@@ -57,5 +57,10 @@ describe "DateRange" do
       (march & july).should == []
     end
 
+
+    it "can figure out the number of days in" do
+      year.number_of_days_in(march).should == 30
+      march.number_of_days_in(july).should == 0
+    end
   end
 end
