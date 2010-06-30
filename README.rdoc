@@ -2,6 +2,11 @@
 
 Library for working with months, quarters and date ranges in Ruby.
 
+include DateRange in any class with a start_date and end_date and be able to iterate over months and days.
+
+Look in the specs for the, uhm, specs.
+
 == Copyright
 
-Copyright (c) 2010 Len Smith. See LICENSE for details.
+Copyright (c) 2010 Len Smith. 
+
