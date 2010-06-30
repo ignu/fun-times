@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "fun-times"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Manage date ranges, months and quarters}
+    gem.description = %Q{Manage date ranges, months and quarters}
     gem.email = "ignu.smith@gmail.com"
     gem.homepage = "http://github.com/ignu/fun-times"
     gem.authors = ["Len Smith"]
