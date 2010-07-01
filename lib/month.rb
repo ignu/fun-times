@@ -1,12 +1,17 @@
 require 'date'
+require 'date_range'
 class Month
   include Comparable
-  attr_accessor :year, :number
+  include DateRange
+  attr_accessor :year, :number, :start_date, :end_date
+ 
 
   def initialize(d)
     @start_date = d 
     @number = d.month
     @year = d.year
+    @start_date = Date.new(@year, @number, 1)
+    @end_date = Date.new(next_months_start.year, next_months_start.month, 1) - 1
   end
 
   def to_s
@@ -23,11 +28,10 @@ class Month
   end
 
   def succ 
-    return Month.new(Date.new(@year+1, 1, 1)) if (@number == 12)
-    Month.new Date.new(@year, @number+1, 1) 
+    Month.new next_months_start
   end
 
-  #TODO: refactor for speed and clarity 
+
   def prev 
     return Month.new(Date.new(@year-1, 12, 1)) if (@number == 1)
     Month.new Date.new(@year, @number-1, 1) 
@@ -44,4 +48,12 @@ class Month
     amount.times {rv = rv.prev}
     rv 
   end
+
+  private
+
+  def next_months_start
+    return Date.new(@year+1, 1, 1) if (@number == 12)
+    Date.new(@year, @number+1, 1) 
+  end
 end
+
