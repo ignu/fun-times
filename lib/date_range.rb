@@ -51,10 +51,14 @@ module DateRange
 
   def _start
     @start_date ||= start_date
+    return @start_date.to_datetime if @start_date.respond_to? :to_datetime
+    @start_date
   end
 
   def _end 
     @end_date ||= end_date
+    return @end_date.to_datetime if @end_date.respond_to? :to_datetime
+    @end_date
   end
 end
 
