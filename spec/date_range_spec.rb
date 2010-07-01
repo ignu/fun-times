@@ -62,5 +62,12 @@ describe "DateRange" do
       year.number_of_days_in(march).should == 30
       march.number_of_days_in(july).should == 0
     end
+
+    it "returns null collections when start or end date is not set" do 
+      r = SimpleRange.new(nil, DateTime.new)
+      r.months.length.should == 0
+      r = SimpleRange.new(DateTime.new, nil)
+      r.months.length.should == 0
+    end
   end
 end

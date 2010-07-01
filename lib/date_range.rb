@@ -1,6 +1,7 @@
 module DateRange 
 
   def months
+    return [] unless _start && _end
     (Month.new(_start)..Month.new(_end))
   end
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager" verified="true">
-    <list default="true" readonly="true" id="595bbcc3-f833-429e-b42d-f5c968084605" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/month.rb" afterPath="$PROJECT_DIR$/lib/month.rb" />
-    </list>
+    <list default="true" readonly="true" id="595bbcc3-f833-429e-b42d-f5c968084605" name="Default" comment="" />
     <ignored path="fun-times.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +27,7 @@
       <file leaf-file-name="month.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/month.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="2" selection-start="967" selection-end="967" vertical-scroll-proportion="0.6164383">
+            <state line="57" column="2" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.6164383">
               <folding />
             </state>
           </provider>
@@ -203,7 +201,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/month.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="2" selection-start="967" selection-end="967" vertical-scroll-proportion="0.6164383">
+        <state line="57" column="2" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.6164383">
           <folding />
         </state>
       </provider>
