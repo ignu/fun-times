@@ -10,8 +10,8 @@ class Month
     @start_date = d 
     @number = d.month
     @year = d.year
-    @start_date = Date.new(@year, @number, 1)
-    @end_date = Date.new(next_months_start.year, next_months_start.month, 1) - 1
+    @start_date = DateTime.new(@year, @number, 1)
+    @end_date = DateTime.new(next_months_start.year, next_months_start.month, 1) - 1
   end
 
   def to_s
@@ -33,8 +33,8 @@ class Month
 
 
   def prev 
-    return Month.new(Date.new(@year-1, 12, 1)) if (@number == 1)
-    Month.new Date.new(@year, @number-1, 1) 
+    return Month.new(DateTime.new(@year-1, 12, 1)) if (@number == 1)
+    Month.new DateTime.new(@year, @number-1, 1) 
   end
   
   def + (amount)
@@ -52,8 +52,8 @@ class Month
   private
 
   def next_months_start
-    return Date.new(@year+1, 1, 1) if (@number == 12)
-    Date.new(@year, @number+1, 1) 
+    return DateTime.new(@year+1, 1, 1) if (@number == 12)
+    DateTime.new(@year, @number+1, 1) 
   end
 end
 

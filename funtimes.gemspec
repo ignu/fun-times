@@ -19,6 +19,13 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     ".idea/.rakeTasks",
+     ".idea/encodings.xml",
+     ".idea/fun-times.iml",
+     ".idea/misc.xml",
+     ".idea/modules.xml",
+     ".idea/vcs.xml",
+     ".idea/workspace.xml",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
