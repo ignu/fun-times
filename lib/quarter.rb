@@ -13,4 +13,16 @@ class Quarter
     new(date.month/4+1, date.year)
   end
 
+  def succ
+    return Quarter.new(@number+1, @year) unless @number == 4
+    Quarter.new(1, @year+1)
+  end
+
+  def <=> (other)
+    @start_date <=> other.start_date 
+  end
+
+  def to_s
+    "Q#{@number}, #{@year}"
+  end 
 end
