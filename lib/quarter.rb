@@ -1,4 +1,5 @@
 class Quarter
+  include DateRange
   attr_accessor :number, :year, :start_date, :end_date
 
   def initialize(q,y) 

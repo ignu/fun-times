@@ -17,6 +17,11 @@ describe "DateRange" do
     year.same_range_as(year).should == true 
   end
 
+  it "should have the quarters in a range" do 
+    year.quarters.first.number.should == 1
+    year.quarters.to_a.length.should == 4
+  end
+
   it "should count the days in the range" do
     range.days.to_a.length.should == 31+28+31+30+31+30+5
   end

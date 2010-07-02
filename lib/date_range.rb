@@ -1,14 +1,19 @@
 module DateRange 
-
-  def months
-    return [] unless _start && _end
-    (Month.new(_start)..Month.new(_end))
-  end
-
+ 
   def days
     (_start)..(_end)
   end
- 
+
+  def months
+    return [] unless _start && _end
+    (Month.from(_start)..Month.from(_end))
+  end
+
+  def quarters
+    return [] unless _start && _end
+    (Quarter.from(_start)..Quarter.from(_end))
+  end
+
   def encompasses(other)
     _start <= other.start_date && _end >= other.end_date 
   end

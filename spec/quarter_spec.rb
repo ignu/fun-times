@@ -38,4 +38,8 @@ describe "Quarter" do
     range.to_a.length.should == 3
     range.end.should == q3
   end
+
+  it "is a daterange" do 
+    q1.months.to_a.length.should == 3
+  end 
 end

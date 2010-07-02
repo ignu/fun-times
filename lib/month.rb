@@ -5,17 +5,18 @@ class Month
   include DateRange
   attr_accessor :year, :number, :start_date, :end_date
  
+  def self.from(date)
+    Month.new(date.month, date.year)
+  end
 
-  def initialize(d)
-    @start_date = d 
-    @number = d.month
-    @year = d.year
+  def initialize(month, year)
+    @number, @year = month, year
     @start_date = DateTime.new(@year, @number, 1)
     @end_date = DateTime.new(next_months_start.year, next_months_start.month, 1) - 1
   end
 
   def to_s
-    "#{name}, #{@year}"
+    "#{name} #{@year}"
   end
 
   def name
@@ -28,13 +29,12 @@ class Month
   end
 
   def succ 
-    Month.new next_months_start
+    Month.from next_months_start
   end
 
-
   def prev 
-    return Month.new(DateTime.new(@year-1, 12, 1)) if (@number == 1)
-    Month.new DateTime.new(@year, @number-1, 1) 
+    return Month.new(12, @year-1) if (@number == 1)
+    Month.new @number-1, @year
   end
   
   def + (amount)

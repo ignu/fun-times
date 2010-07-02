@@ -1,11 +1,11 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Month" do
-  let(:july) {Month.new DateTime.new(1977, 7, 31)}
-  let(:sept) {Month.new DateTime.new(1977, 9, 30)}
+  let(:july) {Month.from DateTime.new(1977, 7, 31)}
+  let(:sept) {Month.new 9, 1977}
 
   it "can initialize the month of a date" do
-    july.to_s.should == "July, 1977"
+    july.to_s.should == "July 1977"
     july.name.should == "July"
     july.year.should == 1977 
     july.number.should == 7
@@ -25,13 +25,13 @@ describe "Month" do
   end
 
   it "can iterate over months when crossing a year barrier" do
-    range = (july..(Month.new(Date.new(1978, 1, 1))))
+    range = (july..(Month.new(1, 1978)))
     range.to_a.length.should == 7
   end
 
   it "can add and subtract months" do 
-    (july+1).to_s.should == "August, 1977"
-    (july-1).to_s.should == "June, 1977"
+    (july+1).to_s.should == "August 1977"
+    (july-1).to_s.should == "June 1977"
   end
 
   it "is a daterange" do 
