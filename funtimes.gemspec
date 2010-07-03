@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Len Smith"]
-  s.date = %q{2010-07-01}
+  s.date = %q{2010-07-02}
   s.description = %q{Manage date ranges, months and quarters}
   s.email = %q{ignu.smith@gmail.com}
   s.extra_rdoc_files = [
@@ -19,24 +19,18 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
-     ".idea/.rakeTasks",
-     ".idea/encodings.xml",
-     ".idea/fun-times.iml",
-     ".idea/misc.xml",
-     ".idea/modules.xml",
-     ".idea/vcs.xml",
-     ".idea/workspace.xml",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "fun-times.gemspec",
      "funtimes.gemspec",
      "lib/date_range.rb",
      "lib/funtimes.rb",
      "lib/month.rb",
+     "lib/quarter.rb",
      "spec/date_range_spec.rb",
      "spec/month_spec.rb",
+     "spec/quarter_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
@@ -48,6 +42,7 @@ Gem::Specification.new do |s|
   s.test_files = [
     "spec/date_range_spec.rb",
      "spec/month_spec.rb",
+     "spec/quarter_spec.rb",
      "spec/spec_helper.rb"
   ]
 
