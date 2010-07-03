@@ -12,9 +12,9 @@ include DateRange in any class with a start_date and end_date and be able to ite
 
 include DateRange in any class that has a start_date and end_date and you'll now have access to months, quarters, days and the be able to find intersections of date ranges.
 
-[Date Range Specs](http://github.com/ignu/fun-times/blob/master/spec/date_range_spec.rb)
-[Month Specs](http://github.com/ignu/fun-times/blob/master/spec/month_spec.rb)
-[Quarter Specs](http://github.com/ignu/fun-times/blob/master/spec/quarter_spec.rb)
+Date Range Specs: http://github.com/ignu/fun-times/blob/master/spec/date_range_spec.rb
+Month Specs http://github.com/ignu/fun-times/blob/master/spec/month_spec.rb
+Quarter Specs http://github.com/ignu/fun-times/blob/master/spec/quarter_spec.rb
 
 == Copyright
 
