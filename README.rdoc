@@ -2,8 +2,6 @@
 
 Funtimes is a library for working with months, quarters and date ranges in Ruby.
 
-include DateRange in any class with a start_date and end_date and be able to iterate over months and days.
-
 == Installation
 
   $ gem install funtimes
