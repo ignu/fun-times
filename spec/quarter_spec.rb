@@ -16,6 +16,10 @@ describe "Quarter" do
   it "can initialize from any date" do 
     quarter = Quarter.from(DateTime.new(2009, 2, 1))
     quarter.year.should == 2009
+    quarter.number.should == 1 
+    quarter = Quarter.from(DateTime.new(2009, 7, 15))
+    quarter.year.should == 2009
+    quarter.number.should == 3 
   end
 
   it "sets the start date correctly" do 
@@ -41,5 +45,10 @@ describe "Quarter" do
 
   it "is a daterange" do 
     q1.months.to_a.length.should == 3
-  end 
+  end
+
+  it "can calculate the number of quarters in a daterange correctly" do
+    range = SimpleRange.new(DateTime.new(2009, 1, 1), DateTime.new(2009, 7, 15))
+    range.quarters.to_a.length.should == 3
+  end
 end
