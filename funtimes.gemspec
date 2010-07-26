@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{funtimes}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Len Smith"]
-  s.date = %q{2010-07-06}
+  s.date = %q{2010-07-25}
   s.description = %q{Manage date ranges, months and quarters}
   s.email = %q{ignu.smith@gmail.com}
   s.extra_rdoc_files = [
@@ -24,10 +24,10 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "funtimes.gemspec",
-     "lib/date_range.rb",
      "lib/funtimes.rb",
-     "lib/month.rb",
-     "lib/quarter.rb",
+     "lib/funtimes/date_range.rb",
+     "lib/funtimes/month.rb",
+     "lib/funtimes/quarter.rb",
      "spec/date_range_spec.rb",
      "spec/month_spec.rb",
      "spec/quarter_spec.rb",
