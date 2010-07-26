@@ -1,5 +1,5 @@
 require 'date'
-require 'date_range'
+require 'funtimes/date_range'
 class Month
   include Comparable
   include DateRange

@@ -1,3 +1,3 @@
-require 'month'
-require 'date_range'
-require 'quarter'
+require 'funtimes/month'
+require 'funtimes/date_range'
+require 'funtimes/quarter'

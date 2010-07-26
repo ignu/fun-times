@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{funtimes}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Len Smith"]
-  s.date = %q{2010-07-02}
+  s.date = %q{2010-07-06}
   s.description = %q{Manage date ranges, months and quarters}
   s.email = %q{ignu.smith@gmail.com}
   s.extra_rdoc_files = [
