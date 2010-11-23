@@ -1,5 +1,5 @@
-module DateRange 
- 
+module DateRange
+
   def days
     (_start)..(_end)
   end
@@ -15,10 +15,10 @@ module DateRange
   end
 
   def encompasses(other)
-    _start <= other.start_date && _end >= other.end_date 
+    _start <= other.start_date && _end >= other.end_date
   end
 
-  def intersects(other) 
+  def intersects(other)
     other.encompasses(self) || encompasses(other) || overlaps(other)
   end
 
@@ -30,7 +30,11 @@ module DateRange
     SimpleRange.new(_start, other.end_date)
   end
 
-  def same_range_as(other) 
+  def | (other)
+    return []
+  end
+
+  def same_range_as(other)
     other.start_date == _start && other.end_date == _end
   end
 
@@ -41,7 +45,7 @@ module DateRange
   end
 
   private
-   
+
   def overlaps(other)
     overlaps_left_side(other) || overlaps_right_side(other)
   end
@@ -60,7 +64,7 @@ module DateRange
     @start_date
   end
 
-  def _end 
+  def _end
     @end_date ||= end_date
     return @end_date.to_datetime if @end_date.respond_to? :to_datetime
     @end_date
