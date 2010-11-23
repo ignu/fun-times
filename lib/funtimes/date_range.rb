@@ -31,7 +31,10 @@ module DateRange
   end
 
   def | (other)
-    return []
+    return [] unless intersects other
+    return self if encompasses(other)
+    return other if other.encompasses(self)
+    SimpleRange.new([_start,other.start_date].min, [_end,other.end_date].max)
   end
 
   def same_range_as(other)
