@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{funtimes}
-  s.version = "0.2.1"
+  s.name = "funtimes"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Len Smith"]
-  s.date = %q{2010-12-01}
-  s.description = %q{Manage date ranges, months and quarters}
-  s.email = %q{ignu.smith@gmail.com}
+  s.date = "2011-10-03"
+  s.description = "Manage date ranges, months and quarters"
+  s.email = "ignu.smith@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -27,34 +27,29 @@ Gem::Specification.new do |s|
     "lib/funtimes/date_range.rb",
     "lib/funtimes/month.rb",
     "lib/funtimes/quarter.rb",
+    "lib/funtimes/week.rb",
     "spec/date_range_spec.rb",
     "spec/month_spec.rb",
     "spec/quarter_spec.rb",
     "spec/spec.opts",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/week_spec.rb"
   ]
-  s.homepage = %q{http://github.com/ignu/fun-times}
+  s.homepage = "http://github.com/ignu/fun-times"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Manage date ranges, months and quarters}
-  s.test_files = [
-    "spec/date_range_spec.rb",
-    "spec/month_spec.rb",
-    "spec/quarter_spec.rb",
-    "spec/spec_helper.rb"
-  ]
+  s.rubygems_version = "1.8.10"
+  s.summary = "Manage date ranges, months and quarters"
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_development_dependency(%q<rspec>, [">= 2.5.0"])
     else
-      s.add_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_dependency(%q<rspec>, [">= 2.5.0"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 1.2.9"])
+    s.add_dependency(%q<rspec>, [">= 2.5.0"])
   end
 end
 
