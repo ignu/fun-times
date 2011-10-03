@@ -23,7 +23,7 @@ describe "DateRange" do
   end
 
   it "should count the days in the range" do
-    range.days.to_a.length.should == 31+28+31+30+31+30+5
+    range.days.to_a.length.should == 31 + 28 + 31 + 30 + 31 + 30 + 5
   end
 
   it "should be able to get the number of months in a range" do

@@ -1,10 +1,11 @@
 require 'date'
 require 'funtimes/date_range'
+
 class Month
   include Comparable
   include DateRange
   attr_accessor :year, :number, :start_date, :end_date
- 
+
   def self.from(date)
     Month.new(date.month, date.year)
   end
@@ -21,39 +22,38 @@ class Month
 
   def name
     @start_date.strftime("%B")
-  end 
+  end
 
   def <=> (other)
     return @year <=> other.year unless @year == other.year
     @number <=> other.number
   end
 
-  def succ 
+  def succ
     Month.from next_months_start
   end
 
-  def prev 
+  def prev
     return Month.new(12, @year-1) if (@number == 1)
     Month.new @number-1, @year
   end
-  
+
   def + (amount)
     rv = self
     amount.times {rv = rv.succ}
-    rv 
+    rv
   end
 
   def -(amount)
     rv = self
     amount.times {rv = rv.prev}
-    rv 
+    rv
   end
 
   private
 
   def next_months_start
     return DateTime.new(@year+1, 1, 1) if (@number == 12)
-    DateTime.new(@year, @number+1, 1) 
+    DateTime.new(@year, @number+1, 1)
   end
 end
-
