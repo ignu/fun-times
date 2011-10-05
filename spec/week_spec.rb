@@ -7,6 +7,14 @@ describe Week do
     first_week.days.to_a.length.should == 7
   end
 
+  it "sets start_date" do
+    first_week.start_date.should == Date.new(2011, 10, 2)
+  end
+
+  it "sets end_date" do
+    first_week.end_date.should == Date.new(2011, 10, 8)
+  end
+
   it "starts the week on a sunday" do
     first_week.days.first.should == Date.new(2011, 10, 2)
   end

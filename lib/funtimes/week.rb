@@ -2,6 +2,7 @@ require 'date'
 require 'funtimes/date_range'
 
 class Week
+  attr_accessor :start_date, :end_date
   START_DAY = 0
 
   include DateRange
