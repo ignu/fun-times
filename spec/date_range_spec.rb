@@ -1,7 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "DateRange" do
-
   let(:firstOfYear)  { DateTime.new(2001,1,1) }
   let(:endOfYear)    { DateTime.new(2001,12,31) }
   let(:firstOfMarch) { DateTime.new(2001,3,1) }
@@ -87,6 +86,12 @@ describe "DateRange" do
       r.months.length.should == 0
       r = SimpleRange.new(DateTime.new, nil)
       r.months.length.should == 0
+    end
+
+    it "can return the weeks" do
+      range = SimpleRange.new(Date.new(2011, 10, 1), DateTime.new(2011, 10, 29))
+      range.weeks.to_a.length.should == 5
+      range.weeks.first.should == Week.new(Date.new(2011, 10, 1))
     end
   end
 end

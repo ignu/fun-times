@@ -1,5 +1,4 @@
 module DateRange
-
   def days
     (_start)..(_end)
   end
@@ -12,6 +11,10 @@ module DateRange
   def quarters
     return [] unless _start && _end
     (Quarter.from(_start)..Quarter.from(_end))
+  end
+
+  def weeks
+    (Week.new(_start)..Week.new(_end))
   end
 
   def encompasses(other)

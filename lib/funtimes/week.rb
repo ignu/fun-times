@@ -5,6 +5,7 @@ class Week
   attr_accessor :start_date, :end_date
   START_DAY = 0
 
+  include Comparable
   include DateRange
 
   def initialize(date)
@@ -16,12 +17,16 @@ class Week
     Week.new start_date
   end
 
-  def previous
-    Week.new(@start_date - 7)
+  def <=> (other)
+    @start_date <=> other.start_date 
   end
 
-  def next
+  def succ
     Week.new(@start_date + 7)
+  end
+
+  def prev
+    Week.new(@start_date - 7)
   end
 
   private

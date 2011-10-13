@@ -19,15 +19,15 @@ describe Week do
     first_week.days.first.should == Date.new(2011, 10, 2)
   end
 
-  describe "#next" do
+  describe "#succ" do
     it "returns the next week" do
-      first_week.next.days.first.should == Date.new(2011, 10, 9)
+      first_week.succ.days.first.should == Date.new(2011, 10, 9)
     end
   end
 
-  describe "#previous" do
+  describe "#prev" do
     it "returns the previous week" do
-      first_week.previous.days.first.should == Date.new(2011, 9, 25)
+      first_week.prev.days.first.should == Date.new(2011, 9, 25)
     end
   end
 end
